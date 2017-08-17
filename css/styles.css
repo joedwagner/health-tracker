@@ -1,0 +1,136 @@
+body {
+    font-family: Saira, sans-serif;
+    margin: 0;
+    background-color: rgba(245,245,245,1);
+}
+
+header {
+    margin-bottom: 1%;
+    background-color: #3366CC;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.25em;
+    font-weight: 100;
+    margin: 0;
+}
+
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0 auto;
+    min-height: 450px;
+}
+
+#search {
+    width: 45%;
+}
+
+#search-form {
+}
+
+#search-box {
+    width: 85%;
+    padding-left: 7%;
+    margin-top: 5px;
+    background: transparent url('../img/search-icon.png') 0 30% no-repeat;
+    background-size: 1.5em;
+    font-family: Saira;
+}
+
+/* Remove datalist arrow */
+/* https://stackoverflow.com/questions/23177409/remove-arrow-in-chrome-for-input-with-attribute-list */
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+#attr-img {
+    margin: 5% auto;
+    display: block;
+}
+
+#search-results-list {
+    list-style-type: none;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-left: 5px;
+}
+
+.search-result-item {
+    display: flex;
+}
+
+.search-result-info {
+    width: 90%;
+    font-size: 1em;
+}
+
+.item-calories {
+    font-size: .8em;
+}
+
+button {
+    display: block;
+    font-size: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    margin: auto 0;
+    color: #3366CC;
+    background-color: rgba(245,245,245,1);
+}
+
+button:hover {
+    color: rgba(245,245,245,1);
+    background-color: #3366CC;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+#tracked-items {
+    width: 50%;
+    margin-left: 5%;
+}
+
+.table-button  {
+    width: 10%;
+    padding-left: 5%;
+}
+
+.table-item-name {
+    width: 70%;
+}
+
+.table-calorie-amount {
+    width: 15%;
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.total td {
+    padding-top: 50%;
+}
+
+tr {
+    width: 100%;
+}
+
+h2 {
+    font-weight: 100;
+    margin-top: 0;
+}
+
+h3 {
+    font-weight: 100;
+}

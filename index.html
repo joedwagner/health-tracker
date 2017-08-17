@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Health Tracker App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Saira">
+</head>
+<body>
+    <header>
+        <h1>Health Tracker App</h1>
+    </header>
+
+    <main id="app">
+        <section id="search">
+            <form id="search-form" autocomplete="off">
+                <input id="search-box" list="search-results" type="text" placeholder="Find a food...">
+                <datalist id="autocomplete-results"></datalist>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div id="attribution">
+            <img id="attr-img" src="img/poweredby_nutritionix_api.png" alt="Nutritionix attribution">
+        </div>
+    </footer>
+
+    <!-- Template for individual search result  -->
+    <script type="text/template" id="search-result-item-template">
+        <div class="search-result-info">
+            <span class="item-name"><%= brandName + ' ' + itemName %></span>
+            <p class="item-calories"><%= calories %> calories</p>
+        </div>
+        <button class="add">+</button>
+    </script>
+
+    <!-- Template for the search result list -->
+    <script type="text/template" id="search-results-template">
+        <% if (searchMade) { %>
+            <% if (collection.length === 0) { %>
+                <h3>No search results found.</h3>
+            <% } else { %>
+                <h3>Search results</h3>
+                <ul id="search-results-list"></ul>
+            <% } %>
+        <% } %>
+    </script>
+
+    <!-- Template for the tracked item list -->
+    <script type="text/template" id="tracked-item-list-template">
+        <h2>Tracked items</h2>
+        <% if (collection.length === 0) { %>
+            <p>You haven't tracked any items yet.</p>
+        <% } else { %>
+            <table id="tracked-item-list">
+                <tr>
+                    <th class="table-item-name">Name</th>
+                    <th class="table-calorie-amount">Calories</th>
+                </tr>
+            </table>
+        <% } %>
+    </script>
+
+    <script type="text/template" id="total-calories-template">
+        <tr class="total">
+            <td>Total calories: </td>
+            <td class="table-calorie-amount"><%= sumCalories() %></td>
+        </tr>
+    </script>
+
+    <!-- Template for individual tracked nutritional item -->
+    <script type="text/template" id="tracked-item-template">
+
+        <td class="table-item-name"><%= brandName + ' ' + itemName %></td>
+        <td class="table-calorie-amount"><%= calories %></td>
+        <td class="table-button"><button class="remove">-</button></td>
+    </script>
+
+    <!-- Import dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js"></script>
+
+    <!-- Application code -->
+    <script src="js/main.js"></script>
+</body>
+</html>
