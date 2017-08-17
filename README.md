@@ -20,7 +20,7 @@ This project could not be completed without code/inspiration from the following 
 
 [Backbone.js Documentation](http://backbonejs.org/)
 
-[Backbone.js Documentation](http://underscorejs.org/)
+[Underscore.js Documentation](http://underscorejs.org/)
 
 [Addy Osmani's Backbone book](https://addyosmani.com/backbone-fundamentals/)
 
