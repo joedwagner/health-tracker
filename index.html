@@ -39,10 +39,8 @@
     <!-- Template for the search result list -->
     <script type="text/template" id="search-results-template">
         <% if (searchMade) { %>
-            <% if (collection.length === 0) { %>
-                <h3>No search results found.</h3>
-            <% } else { %>
-                <h3>Search results</h3>
+            <h3><%= searchMessage %></h3>
+            <% if (collection.length > 0) { %>
                 <ul id="search-results-list"></ul>
             <% } %>
         <% } %>
@@ -85,5 +83,11 @@
 
     <!-- Application code -->
     <script src="js/main.js"></script>
+    <script src="js/models/NutritionItem.js"></script>
+    <script src="js/collections/NutritionItemCollection.js"></script>
+    <script src="js/views/SearchResultItemView.js"></script>
+    <script src="js/views/SearchResultsView.js"></script>
+    <script src="js/views/TrackedItemView.js"></script>
+    <script src="js/views/TrackedItemListView.js"></script>
 </body>
 </html>
